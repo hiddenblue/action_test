@@ -1,13 +1,13 @@
 name: Run compose
-on: [push]
+on: [ push ]
 
 jobs:
-  run-comose:
+  run-compose:
     timeout-minutes: 10
     runs-on: ubuntu-latest
-  
+
   steps:
-  - name: Checkout
-    users: actions/checkout@main
-  - name: Start docker compose
-    run: docker compose version
+    - name: Checkout
+      uses: actions/checkout@main
+    - name: Start docker compose
+      run: docker compose version
